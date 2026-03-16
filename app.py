@@ -81,6 +81,10 @@ st.header("1. Conceptos Básicos de Presión Intraocular")
 st.markdown("""
 La PIO es la presión del fluido dentro del globo ocular y depende de tres factores fundamentales de la biomecánica y fisiología:
 """)
+# Insertar debajo de st.header("1. Conceptos Básicos...")
+st.image("img/dinamicaha.png", 
+         caption="Figura 1. Anatomía y fisiología del flujo del Humor Acuoso.", 
+         use_container_width=True)
 
 # --- 1. PRODUCCIÓN ---
 with st.expander("1. Producción de Humor Acuoso", expanded=True):
@@ -309,6 +313,11 @@ with st.expander("Física de la Medición: Principio de Imbert-Fick", expanded=T
     
     **Rigor Técnico:** Con un diámetro de aplanación de **3.06 mm**, las fuerzas **S** y **B** se cancelan mutuamente, permitiendo que la fuerza aplicada sea una lectura directa de la PIO.
     """)
+    
+    # Insertar justo antes del simulador de errores
+st.image("img/mirassemicirculos.jpg", 
+         caption="Figura 2. Alineación ideal de los semicírculos (Miras).", 
+         width=450)
 
 # --- SIMULADOR DE ERRORES GAT REFINADO ---
 st.subheader("Simulador de Errores en Tonometría de Goldmann (GAT)")
@@ -362,6 +371,10 @@ with col_err2:
         else:
             st.warning("**EFECTO INDETERMINADO.** Los errores se compensan entre sí, pero la técnica es deficiente. Repetir medición.")
 
+# Insertar al final del simulador de errores
+st.image("img/errorestonometria.png", 
+         caption="Figura 3. Galería de errores comunes en la técnica de tonometría.", 
+         use_container_width=True)
 
 
 # 3. Comparativa de Tecnologías
