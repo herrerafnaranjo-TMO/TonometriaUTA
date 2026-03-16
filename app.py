@@ -2,45 +2,34 @@ import streamlit as st
 import pandas as pd  # <--- ESTA LÍNEA ES LA QUE FALTA O FUE SOBREESCRITA
 import numpy as np
 
-# --- INYECCIÓN DE ESTILO CUSTOM (CSS) ---
+import streamlit as st
+
+# 1. ESTO SIEMPRE VA PRIMERO
+st.set_page_config(page_title="Tonometría y Glaucoma", layout="wide")
+
+# 2. INYECCIÓN DE ESTILO ADAPTATIVO (Respetando el tema del sistema)
 st.markdown("""
     <style>
-    /* Cambiar el fondo de la página */
-    .stApp {
-        background-color: #f0f2f6;
-    }
-    /* Estilo para los Títulos (Headers) */
+    /* No forzamos fondo, dejamos que Streamlit lo maneje (Light/Dark) */
+    
+    /* Estilo para los Títulos: usamos color heredado para que cambie solo */
     h1, h2, h3 {
-        color: #0e1117;
         font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     }
-    /* Resaltar los Metrics */
+    
+    /* Resaltar los Metrics con un azul que funcione en ambos modos */
     [data-testid="stMetricValue"] {
-        color: #1f77b4;
+        color: #4da3ff; /* Un azul más brillante visible en negro y blanco */
         font-weight: bold;
     }
-    /* Personalizar los cuadros de Info/Warning */
+    
+    /* Bordes suaves para alertas */
     .stAlert {
         border-radius: 10px;
+        border: 1px solid rgba(128, 128, 128, 0.2);
     }
     </style>
     """, unsafe_allow_html=True)
-
-# Configuración con Academic Rigor
-st.set_page_config(page_title="EBCD-SS: Tonometry & Glaucoma", layout="wide")
-
-# Esto define la paleta de colores académica
-st.markdown("""
-    <style>
-    :root {
-        --primary-color: #003366; /* Azul Marino Académico */
-        --background-color: #ffffff;
-        --secondary-background-color: #e6e9ef;
-        --text-color: #262730;
-        --font: "sans serif";
-    }
-    </style>
-""", unsafe_allow_html=True)
 
 
 # --- SECCIÓN 1: INTRODUCCIÓN Y FUNDAMENTOS ---
