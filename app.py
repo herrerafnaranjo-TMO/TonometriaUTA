@@ -600,7 +600,6 @@ with st.expander("📚 Ver Referencias Bibliográficas (59 fuentes)"):
         "57.	Medeiros FA, Weinreb RN, Zangwill LM, et al. Long-term intraocular pressure fluctuations and risk of conversion from ocular hypertension to glaucoma. Ophthalmology. Jun 2008;115(6):934-940."
         "58.	Liu JH, Zhang X, Kripke DF, Weinreb RN. Twenty-four-hour intraocular pressure pattern associated with early glaucomatous changes. Invest Ophthalmol Vis Sci. Apr 2003;44(4):1586-1590."
         "59.	Caprioli J, Coleman AL. Intraocular pressure fluctuation a risk factor for visual field progression at low intraocular pressures in the advanced glaucoma intervention study. Ophthalmology. Jul 2008;115(7):1123-1129 e1123."
-        "
     ]
     
     for ref in referencias:
