@@ -416,47 +416,52 @@ st.info("**OHTS Evidence:** Un CCT delgado es un factor de riesgo independiente 
 
 # --- SIMULADOR DE PIO CORREGIDA (IOP CORRECTION SIMULATOR) ---
 st.markdown("---")
-st.header("🔢 Simulador de Ajuste Clínico (IOP vs CCT)")
-st.write("Utilice este simulador para entender cómo el espesor corneal afecta la medición tonométrica.")
+st.header("🔢 Simulador de Corrección de PIO según CCT")
 
-# 1. Validación de Inputs (Data Integrity)
-col_input1, col_input2 = st.columns(2)
-
-with col_input1:
+# 1. Validación de Inputs (Data Integrity & Range Validation)
+col_in1, col_in2 = st.columns(2)
+with col_in1:
     pio_medida = st.number_input(
         "PIO Medida (mmHg):", 
         min_value=2.0, max_value=70.0, value=15.0, step=1.0,
-        help="Presión obtenida directamente del tonómetro de Goldmann."
+        help="Presión obtenida por tonometría de aplanación (GAT)."
     )
-
-with col_input2:
+with col_in2:
     cct_paciente = st.number_input(
         "Paquimetría Central (µm):", 
         min_value=300, max_value=850, value=540, step=5,
-        help="Espesor corneal central (CCT). El promedio es 540-550 µm."
+        help="Espesor corneal central medido por paquimetría ultrasónica u óptica."
     )
 
-# 2. Lógica de Cálculo (Basada en el factor de Ehlers: ~0.7 mmHg por cada 10µm)
-# Nota: Se usa una aproximación pedagógica común en pregrado.
-desviacion_cct = cct_paciente - 545
-factor_correccion = (desviacion_cct / 10) * 0.7
-pio_corregida = pio_medida - factor_correccion
+# 2. Lógica de Alertas de Seguridad (Clinical Red Flags)
+if pio_medida > 30:
+    st.error("⚠️ **Alerta:** Presión muy elevada. Sospechar Glaucoma de ángulo cerrado o error de calibración.")
+elif pio_medida < 8:
+    st.warning("⚠️ **Alerta:** Hipotonía ocular. Revisar posible filtración o desprendimiento ciliar.")
 
-# 3. Despliegue de Resultados y Alertas (Clinical Insights)
-st.subheader(f"Resultado Estimado: {pio_corregida:.1f} mmHg")
+if cct_paciente < 450 or cct_paciente > 620:
+    st.info("💡 **Nota:** Esta córnea tiene un espesor atípico. El factor de corrección tiene mayor margen de error.")
+
+# 3. Cálculo de la PIO Corregida (Ehlers/Dresdner Approximation)
+factor_corr = ((cct_paciente - 545) / 10) * 0.7
+pio_corregida = pio_medida - factor_corr
+
+# 4. Despliegue de Resultados e Interpretación Didáctica
+st.subheader(f"Estimación de PIO Corregida: {pio_corregida:.1f} mmHg")
 
 if cct_paciente < 545:
-    st.info(f"💡 **Interpretación:** La córnea es delgada. La PIO real es probablemente **MAYOR** que la medida (se sumaron {abs(factor_correccion):.1f} mmHg).")
+    st.info(f"💡 **Interpretación:** La córnea es delgada. La PIO real es probablemente **MAYOR** que la medida (se sumaron {abs(factor_corr):.1f} mmHg).")
 elif cct_paciente > 545:
-    st.info(f"💡 **Interpretación:** La córnea es gruesa. La PIO real es probablemente **MENOR** que la medida (se restaron {abs(factor_correccion):.1f} mmHg).")
+    st.info(f"💡 **Interpretación:** La córnea es gruesa. La PIO real es probablemente **MENOR** que la medida (se restaron {abs(factor_corr):.1f} mmHg).")
 else:
     st.success("✅ Córnea con espesor promedio. No se requiere ajuste teórico.")
 
-# 4. Rigor Académico (Evidence Disclaimer)
-st.caption("""
-**Nota Pedagógica:** Este cálculo es una aproximación teórica. 
-En la práctica clínica (Evidence-Based Practice), la biomecánica corneal es compleja 
-y no debe usarse una fórmula única para decidir tratamiento.
+# 5. Nota Docente de Rigor (Evidence-Based Practice Disclaimer)
+st.warning("""
+**Nota Docente:** La 'PIO Corregida' es solo una estimación teórica. 
+En la clínica, no se debe ajustar la presión solo por paquimetría; 
+se debe evaluar integralmente el nervio óptico y el campo visual. 
+*(Referencia: OHTS Guidelines)*.
 """)
 
 
