@@ -414,6 +414,50 @@ st.write("""
       """)
 st.info("**OHTS Evidence:** Un CCT delgado es un factor de riesgo independiente para la conversión a Glaucoma [Ref 12].")
 
+# --- SIMULADOR DE PIO CORREGIDA (IOP CORRECTION SIMULATOR) ---
+st.markdown("---")
+st.header("🔢 Simulador de Ajuste Clínico (IOP vs CCT)")
+st.write("Utilice este simulador para entender cómo el espesor corneal afecta la medición tonométrica.")
+
+# 1. Validación de Inputs (Data Integrity)
+col_input1, col_input2 = st.columns(2)
+
+with col_input1:
+    pio_medida = st.number_input(
+        "PIO Medida (mmHg):", 
+        min_value=2.0, max_value=70.0, value=15.0, step=1.0,
+        help="Presión obtenida directamente del tonómetro de Goldmann."
+    )
+
+with col_input2:
+    cct_paciente = st.number_input(
+        "Paquimetría Central (µm):", 
+        min_value=300, max_value=850, value=540, step=5,
+        help="Espesor corneal central (CCT). El promedio es 540-550 µm."
+    )
+
+# 2. Lógica de Cálculo (Basada en el factor de Ehlers: ~0.7 mmHg por cada 10µm)
+# Nota: Se usa una aproximación pedagógica común en pregrado.
+desviacion_cct = cct_paciente - 545
+factor_correccion = (desviacion_cct / 10) * 0.7
+pio_corregida = pio_medida - factor_correccion
+
+# 3. Despliegue de Resultados y Alertas (Clinical Insights)
+st.subheader(f"Resultado Estimado: {pio_corregida:.1f} mmHg")
+
+if cct_paciente < 545:
+    st.info(f"💡 **Interpretación:** La córnea es delgada. La PIO real es probablemente **MAYOR** que la medida (se sumaron {abs(factor_correccion):.1f} mmHg).")
+elif cct_paciente > 545:
+    st.info(f"💡 **Interpretación:** La córnea es gruesa. La PIO real es probablemente **MENOR** que la medida (se restaron {abs(factor_correccion):.1f} mmHg).")
+else:
+    st.success("✅ Córnea con espesor promedio. No se requiere ajuste teórico.")
+
+# 4. Rigor Académico (Evidence Disclaimer)
+st.caption("""
+**Nota Pedagógica:** Este cálculo es una aproximación teórica. 
+En la práctica clínica (Evidence-Based Practice), la biomecánica corneal es compleja 
+y no debe usarse una fórmula única para decidir tratamiento.
+""")
 
 
 # --- MÓDULO 4: EPIDEMIOLOGÍA Y VALOR PREDICTIVO ---
