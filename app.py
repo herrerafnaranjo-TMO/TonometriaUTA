@@ -593,3 +593,17 @@ with st.expander("📚 Referencias Bibliográficas"):
     
     for ref in referencias:
         st.markdown(f"- {ref}")
+
+# --- PIE DE PÁGINA (FOOTER) ---
+st.write("") # Espacio en blanco para separar
+st.write("") 
+
+st.markdown("""
+    <hr style="border: 0; border-top: 1px solid #ccc; margin-top: 50px;">
+    <div style="text-align: center; color: gray; font-size: 0.8em; font-family: sans-serif;">
+        <strong>Diseñado por Felipe Naranjo H.</strong><br>
+        Tecnólogo Médico en Oftalmología y Optometría<br>
+        <em>Universidad de Tarapacá (UTA) - 2026</em><br>
+        <span style="font-size: 0.7em;">Enfoque en Evidence-Based Clinical Practice & Health Informatics</span>
+    </div>
+""", unsafe_allow_html=True)
