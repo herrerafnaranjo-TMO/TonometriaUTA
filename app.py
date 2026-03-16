@@ -532,3 +532,76 @@ st.line_chart(df_curva.set_index("Hora"))
 st.warning("""
 **Dificultad Estadística:** Es complejo determinar si el daño se debe a la variabilidad per se o simplemente a que una mayor fluctuación aumenta la probabilidad de alcanzar picos hipertensivos peligrosos.
 """)
+
+# --- SECCIÓN DE REFERENCIAS BIBLIOGRÁFICAS (REFERENCES) ---
+st.markdown("---") # Línea divisoria para separar del simulador
+
+with st.expander("📚 Ver Referencias Bibliográficas (59 fuentes)"):
+    st.markdown("### Bibliografía y Evidencia Científica")
+    st.write("La siguiente lista contiene la evidencia que sustenta los algoritmos y conceptos de esta plataforma:")
+    
+    referencias = [
+        "1.	Brubaker RF. Clinical measurements of aqueous dynamics: implications for addressing glaucoma. In: Civan MM, ed. The Eye's Aqueous Humor, From Secretion to Glaucoma. New York, NY: Academic Press; 1998:234-284."
+        "2.	Tamm ER, Lutjen-Drecoll E. Ciliary body. Microscopy research and technique. Apr 1 1996;33(5):390-439."
+        "3.	Weinreb R, Brandt JD, Garway-Heath DF, Medeiros FA. Intraocular Pressure. World Glaucoma Association Consensus Series. The Hague, The Netherlands: Kugler Publications; 2007."
+        "4.	Tripathi RC. Mechanism of the aqueous outflow across the trabecular wall of Schlemm's canal. Exp Eye Res. Jan 1971;11(1):116-121."
+        "5.	Alm A, Nilsson SF. Uveoscleral outflow--a review. Exp Eye Res. Apr 2009;88(4):760-768."
+        "6.	Toris CB, Yablonski ME, Wang YL, Camras CB. Aqueous humor dynamics in the aging human eye. Am J Ophthalmol. Apr 1999;127(4):407-412."
+        "7.	Nemesure B, Honkanen R, Hennis A, Wu SY, Leske MC, Barbados Eye Studies G. Incident open-angle glaucoma and intraocular pressure. Ophthalmology. Oct 2007;114(10):1810-1815."
+        "8.	Leydhecker W, Akiyama K, Neumann HG. [Intraocular pressure in normal human eyes]. Klinische Monatsblatter fur Augenheilkunde und fur augenarztliche Fortbildung. 1958;133(5):662-670."
+        "9.	Chan MP, Grossi CM, Khawaja AP, et al. Associations with Intraocular Pressure in a Large Cohort: Results from the UK Biobank. Ophthalmology. Apr 2016;123(4):771-782."
+        "10.	Gillespie BW, Musch DC, Guire KE, et al. The collaborative initial glaucoma treatment study: baseline visual field and test-retest variability. Invest Ophthalmol Vis Sci. Jun 2003;44(6):2613-2620."
+        "11.	Nouri-Mahdavi K, Hoffman D, Coleman AL, et al. Predictive factors for glaucomatous visual field progression in the Advanced Glaucoma Intervention Study. Ophthalmology. Sep 2004;111(9):1627-1635."
+        "12.	Gordon MO, Beiser JA, Brandt JD, et al. The Ocular Hypertension Treatment Study: baseline factors that predict the onset of primary open-angle glaucoma. Arch Ophthalmol. Jun 2002;120(6):714-720; discussion 829-730."
+        "13.	Drance SM. The Collaborative Normal-Tension Glaucoma Study and some of its lessons. Can J Ophthalmol. Feb 1999;34(1):1-6."
+        "14.	Duggal P, Klein AP, Lee KE, Klein R, Klein BE, Bailey-Wilson JE. Identification of novel genetic loci for intraocular pressure: a genomewide scan of the Beaver Dam Eye Study. Arch Ophthalmol. Jan 2007;125(1):74-79."
+        "15.	Ortiz GJ, Cook DJ, Yablonski ME, Masonson H, Harmon G. Effect of cold air on aqueous humor dynamics in humans. Invest Ophthalmol Vis Sci. Jan 1988;29(1):138-140."
+        "16.	Mehra KS, Roy PN, Khare BB. Tobacco smoking and glaucoma. Ann Ophthalmol. Apr 1976;8(4):462-464."
+        "17.	Rafuse PE, Mills DW, Hooper PL, Chang TS, Wolf R. Effects of Valsalva's manoeuvre on intraocular pressure. Can J Ophthalmol. Apr 1994;29(2):73-76."
+        "18.	Iester M, Mermoud A, Achache F, Roy S. New Tonopen XL: comparison with the Goldmann tonometer. Eye. Feb 2001;15(Pt 1):52-58."
+        "19.	Kim NR, Kim CY, Kim H, Seong GJ, Lee ES. Comparison of goldmann applanation tonometer, noncontact tonometer, and TonoPen XL for intraocular pressure measurement in different types of glaucomatous, ocular hypertensive, and normal eyes. Current eye research. Apr 2011;36(4):295-300."
+        "20.	Estrovich IE, Shen C, Chu Y, et al. Schiotz tonometry accurately measures intraocular pressure in Boston type 1 keratoprosthesis eyes. Cornea. Jun 2015;34(6):682-685."
+        "21.	Lin CC, Chen A, Jeng BH, Porco TC, Ou Y, Han Y. Scleral intraocular pressure measurement in cadaver eyes pre- and postkeratoprosthesis implantation. Investigative ophthalmology & visual science. Apr 2014;55(4):2244-2250."
+        "22.	Cook JA, Botello AP, Elders A, et al. Systematic review of the agreement of tonometers with Goldmann applanation tonometry. Ophthalmology. Aug 2012;119(8):1552-1557."
+        "23.	Okafor KC, Brandt JD. Measuring intraocular pressure. Current opinion in ophthalmology. Mar 2015;26(2):103-109."
+        "24.	Gaasterland D, Tanishima T, Kuwabara T. Axoplasmic flow during chronic experimental glaucoma. 1. Light and electron microscopic studies of the monkey optic nervehead during development of glaucomatous cupping. Invest Ophthalmol Vis Sci. Sep 1978;17(9):838-846."
+        "25.	Quigley HA, Addicks EM. Chronic experimental glaucoma in primates. II. Effect of extended intraocular pressure elevation on optic nerve head and axonal transport. Invest Ophthalmol Vis Sci. Feb 1980;19(2):137-152."
+        "26.	Cartwright MJ, Anderson DR. Correlation of asymmetric damage with asymmetric intraocular pressure in normal-tension glaucoma (low-tension glaucoma). Arch Ophthalmol. Jul 1988;106(7):898-900."
+        "27.	Crichton A, Drance SM, Douglas GR, Schulzer M. Unequal intraocular pressure and its relation to asymmetric visual field defects in low-tension glaucoma. Ophthalmology. Sep 1989;96(9):1312-1314."
+        "28.	Hollows FC, Graham PA. Intra-ocular pressure, glaucoma, and glaucoma suspects in a defined population. Br J Ophthalmol. Oct 1966;50(10):570-586."
+        "29.	Bengtsson B. The prevalence of glaucoma. Br J Ophthalmol. Jan 1981;65(1):46-49."
+        "30.	Leske MC, Connell AM, Wu SY, Hyman LG, Schachat AP. Risk factors for open-angle glaucoma. The Barbados Eye Study. Arch Ophthalmol. Jul 1995;113(7):918-924."
+        "31.	Shiose Y, Kitazawa Y, Tsukahara S, et al. Epidemiology of glaucoma in Japan--a nationwide glaucoma survey. Jpn J Ophthalmol. 1991;35(2):133-155."
+        "32.	Coleman A, Pasquale L, Girkin C, Bourne RR, Iwase A. Epidemiology of intraocular pressure. In: Weinreb R, Brandt JD, Garway-Heath DF, Medeiros FA, eds. Intraocular Pressure. Amsterdam: Kugler Publications; 2007:79-101."
+        "33.	Torres RJ, Jones E, Edmunds B, Becker T, Cioffi GA, Mansberger SL. Central corneal thickness in Northwestern American Indians/Alaskan Natives and comparison with White and African-American persons. Am J Ophthalmol. Nov 2008;146(5):747-751."
+        "34.	Sommer A, Tielsch JM, Katz J, et al. Relationship between intraocular pressure and primary open angle glaucoma among white and black Americans. The Baltimore Eye Survey. Arch Ophthalmol. 1991;109(8):1090-1095."
+        "35.	Kohlhaas M, Boehm AG, Spoerl E, Pursten A, Grein HJ, Pillunat LE. Effect of central corneal thickness, corneal curvature, and axial length on applanation tonometry. Arch Ophthalmol. Apr 2006;124(4):471-476."
+        "36.	Shih CY, Graff Zivin JS, Trokel SL, Tsai JC. Clinical significance of central corneal thickness in the management glaucoma. Arch Ophthalmol. Sep 2004;122(9):1270-1275."
+        "37.	Wilson LB, Quinn GE, Ying GS, et al. The relation of axial length and intraocular pressure fluctuations in human eyes. Invest Ophthalmol Vis Sci. May 2006;47(5):1778-1784."
+        "38.	Kass MA, Heuer DK, Higginbotham EJ, et al. The Ocular Hypertension Treatment Study: a randomized trial determines that topical ocular hypotensive medication delays or prevents the onset of primary open-angle glaucoma. Arch Ophthalmol. Jun 2002;120(6):701-713; discussion 829-730."
+        "39.	Coffey M, Reidy A, Wormald R, Xian WX, Wright L, Courtney P. Prevalence of glaucoma in the west of Ireland. Br J Ophthalmol. Jan 1993;77(1):17-21."
+        "40.	Kahn HA, Milton RC. Revised Framingham eye study prevalence of glaucoma and diabetic retinopathy. Am J Epidemiol. Jun 1980;111(6):769-776."
+        "41.	Klein BE, Klein R, Sponsel WE, et al. Prevalence of glaucoma. The Beaver Dam Eye Study. Ophthalmology. Oct 1992;99(10):1499-1504."
+        "42.	Tielsch JM, Sommer A, Katz J, Royall RM, Quigley HA, Javitt J. Racial variations in the prevalence of primary open-angle glaucoma. The Baltimore Eye Survey. Jama. 1991;266(3):369-374."
+        "43.	Tielsch J, Katz J, Singh K. Population-based evaluation of glaucoma screening: The Baltimore Eye Survey. Am J Epidemiology. 1991;134:1102-1110."
+        "44.	Sultan MB, Mansberger SL, Lee PP. Understanding the importance of IOP variables in glaucoma: a systematic review. Surv Ophthalmol. Nov-Dec 2009;54(6):643-662."
+        "45.	Jonas JB, Budde WM, Stroux A, Oberacher-Velten IM, Junemann A. Diurnal intraocular pressure profiles and progression of chronic open-angle glaucoma. Eye. Apr 7 2006."
+        "46.	Bengtsson B, Heijl A. Diurnal IOP fluctuation: not an independent risk factor for glaucomatous visual field loss in high-risk ocular hypertension. Graefes Arch. Clin. Exp. Ophthalmol. Jun 2005;243(6):513-518."
+        "47.	Barkana Y, Anis S, Liebmann J, Tello C, Ritch R. Clinical utility of intraocular pressure monitoring outside of normal office hours in patients with glaucoma. Arch Ophthalmol. Jun 2006;124(6):793-797."
+        "48.	Wax MB, Camras CB, Fiscella RG, Girkin C, Singh K, Weinreb RN. Emerging perspectives in glaucoma: optimizing 24-hour control of intraocular pressure. Am. J. Ophthalmol. Jun 2002;133 Suppl:S1-10."
+        "49.	Bergea B, Bodin L, Svedbergh B. Impact of intraocular pressure regulation on visual fields in open-angle glaucoma. Ophthalmology. 1999;106(5):997-1004; discussion 1004-1005."
+        "50.	Asrani S, Zeimer R, Wilensky J, Gieser D, Vitale S, Lindenmuth K. Large diurnal fluctuations in intraocular pressure are an independent risk factor in patients with glaucoma. J Glaucoma. Apr 2000;9(2):134-142."
+        "51.	Leske MC, Heijl A, Hussein M, Bengtsson B, Hyman L, Komaroff E. Factors for glaucoma progression and the effect of treatment: the early manifest glaucoma trial. Arch Ophthalmol. 2003;121(1):48-56."
+        "52.	AGIS:7. The advanced glaucoma intervention study (AGIS): 7. The relationship between control of intraocular pressure and visual field deterioration. The AGIS Investigators. Am. J. Ophthalmol. 2000;130(4):429-440."
+        "53.	CNTGS. The effectiveness of intraocular pressure reduction in the treatment of normal-tension glaucoma. Collaborative Normal-Tension Glaucoma Study Group. Am. J. Ophthalmol. 1998;126(4):498-505."
+        "54.	CNTGS. Comparison of glaucomatous progression between untreated patients with normal-tension glaucoma and patients with therapeutically reduced intraocular pressures. Collaborative Normal-Tension Glaucoma Study Group. Am. J. Ophthalmol. 1998;126(4):487-497."
+        "55.	Realini T, Weinreb RN, Wisniewski SR. Diurnal intraocular pressure patterns are not repeatable in the short term in healthy individuals. Ophthalmology. Sep 2010;117(9):1700-1704."
+        "56.	Bengtsson B, Leske MC, Hyman L, Heijl A. Fluctuation of intraocular pressure and glaucoma progression in the early manifest glaucoma trial. Ophthalmology. Feb 2007;114(2):205-209."
+        "57.	Medeiros FA, Weinreb RN, Zangwill LM, et al. Long-term intraocular pressure fluctuations and risk of conversion from ocular hypertension to glaucoma. Ophthalmology. Jun 2008;115(6):934-940."
+        "58.	Liu JH, Zhang X, Kripke DF, Weinreb RN. Twenty-four-hour intraocular pressure pattern associated with early glaucomatous changes. Invest Ophthalmol Vis Sci. Apr 2003;44(4):1586-1590."
+        "59.	Caprioli J, Coleman AL. Intraocular pressure fluctuation a risk factor for visual field progression at low intraocular pressures in the advanced glaucoma intervention study. Ophthalmology. Jul 2008;115(7):1123-1129 e1123."
+        "
+    ]
+    
+    for ref in referencias:
+        st.markdown(f"- {ref}")
