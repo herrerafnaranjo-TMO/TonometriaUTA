@@ -604,6 +604,6 @@ st.markdown("""
         <strong>Diseñado por Felipe Naranjo H.</strong><br>
         Tecnólogo Médico en Oftalmología y Optometría<br>
         <em>Universidad de Tarapacá (UTA) - 2026</em><br>
-        <span style="font-size: 0.7em;">Enfoque en Evidence-Based Clinical Practice & Health Informatics</span>
+        <span style="font-size: 0.7em;">Exelencia desde el Extremo Norte</span>
     </div>
 """, unsafe_allow_html=True)
